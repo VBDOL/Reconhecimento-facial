@@ -39,12 +39,12 @@ No bloco principal, são definidos os caminhos para a imagem de entrada e o mode
 ### Imagem Original
 Nesta seção, a imagem original carregada pelo sistema será apresentada.
 
-![Imagem Original](caminho/para/imagem_original.png)
+![Imagem Original](reconhecimento.png)
 
 ### Detecção Facial
 Aqui será exibida a imagem com a detecção facial aplicada, mostrando as faces detectadas com retângulos verdes ao redor.
 
-![Detecção Facial](caminho/para/imagem_detectada.png)
+![Detecção Facial](reconhecimento1.png)
 
 ## Conclusão
 
