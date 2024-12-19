@@ -1,43 +1,53 @@
-# Criando um Sistema de Reconhecimento Facial do Zero
+# Sistema de Reconhecimento Facial com MTCNN e TensorFlow
 
 ## Descrição do Projeto
 
-O objetivo principal deste projeto é trabalhar com as bibliotecas e frameworks estudados em nossas aulas para criar um sistema de detecção e reconhecimento de faces. Utilizaremos o framework TensorFlow em conjunto com outras bibliotecas necessárias. O sistema deve ser capaz de detectar e reconhecer múltiplas faces simultaneamente.
+O objetivo deste projeto é criar um sistema de reconhecimento facial do zero, utilizando bibliotecas e frameworks estudados durante as aulas. O sistema deve ser capaz de detectar e reconhecer múltiplas faces em uma imagem ao mesmo tempo. Para isso, foram utilizadas as bibliotecas TensorFlow, OpenCV, NumPy e MTCNN.
 
-![Figura 1: Detecção e reconhecimento facial](caminho/para/sua/imagem.png)
+## Instalação de Dependências
 
-## Requisitos
+Para executar o projeto no ambiente Google Colab, é necessário instalar as dependências `mtcnn` e `opencv-python-headless`. Essas bibliotecas são essenciais para a detecção e o processamento de imagens.
 
-- TensorFlow
-- OpenCV
-- dlib
-- NumPy
-- Outros pacotes que julgue necessário
+## Etapas do Projeto
 
-## Passos para Implementação
+### 1. Importação de Bibliotecas e Configuração Inicial
 
-### 1. Detecção Facial
+Nesta etapa, são importadas todas as bibliotecas necessárias para o projeto, incluindo TensorFlow para o reconhecimento facial, OpenCV para o processamento de imagens, NumPy para manipulação de arrays, matplotlib para exibição de imagens, e MTCNN para detecção facial.
 
-Utilize uma rede de detecção treinada para detectar faces. Uma boa referência é o trabalho de detecção facial disponível [aqui](https://colab.research.google.com/drive/1QnC7lV7oVFk5OZCm75fqbLAfD9qBy9bw?usp=sharing).
+### 2. Carregamento e Exibição de Imagens
 
-### 2. Classificação Facial
+Funções foram desenvolvidas para carregar e exibir imagens. O carregamento é feito com a biblioteca OpenCV, e a exibição das imagens é feita com matplotlib para melhor visualização dos resultados.
 
-Utilize uma rede de classificação para reconhecer a face detectada. Você pode utilizar o exemplo de detecção e classificação de objetos disponível [aqui](https://colab.research.google.com/drive/1xdjyBiY75MAVRSjgmiqI7pbRLn58VrbE?usp=sharing).
+### 3. Detecção Facial com MTCNN
 
-### 3. Pré-processamento das Imagens
+Utiliza-se a biblioteca MTCNN para detectar faces nas imagens. A MTCNN é uma rede neural treinada para identificar rostos em diferentes posições e iluminações. Faces detectadas com confiança maior que 90% são marcadas com retângulos verdes na imagem.
 
-- Carregar imagens
-- Detectar faces nas imagens
-- Alinhar e redimensionar as faces detectadas
+### 4. Reconhecimento Facial
 
-### 4. Treinamento do Modelo
+Para o reconhecimento facial, é utilizada uma rede neural pré-treinada (exemplo: FaceNet) que gera embeddings das faces detectadas. Esses embeddings são vetores que representam características únicas de cada rosto, permitindo a identificação e classificação das faces.
 
-- Treinar uma rede de detecção de faces
-- Treinar uma rede de classificação de faces
+### 5. Integração: Detecção e Reconhecimento
 
-### 5. Integração e Avaliação
+As etapas de detecção e reconhecimento facial são integradas para processar uma imagem de entrada, detectar as faces presentes, gerar embeddings para essas faces e exibir os resultados. O processo é executado de forma sequencial, desde o carregamento da imagem até a exibição das faces reconhecidas.
 
-- Integrar os modelos de detecção e classificação
-- Testar o sistema em novas imagens
+### 6. Execução Principal
 
+No bloco principal, são definidos os caminhos para a imagem de entrada e o modelo de reconhecimento facial. A função principal do projeto é chamada para processar a imagem e exibir os resultados.
 
+## Resultados Esperados
+
+### Imagem Original
+Nesta seção, a imagem original carregada pelo sistema será apresentada.
+
+![Imagem Original](caminho/para/imagem_original.png)
+
+### Detecção Facial
+Aqui será exibida a imagem com a detecção facial aplicada, mostrando as faces detectadas com retângulos verdes ao redor.
+
+![Detecção Facial](caminho/para/imagem_detectada.png)
+
+## Conclusão
+
+Este projeto demonstra a aplicação prática de técnicas de visão computacional para a criação de um sistema de reconhecimento facial. Utilizando bibliotecas poderosas como TensorFlow e MTCNN, foi possível desenvolver um sistema capaz de detectar e reconhecer múltiplas faces em uma imagem, mostrando o potencial dessas ferramentas para aplicações reais.
+
+---
